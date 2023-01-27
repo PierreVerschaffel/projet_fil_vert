@@ -39,14 +39,46 @@ nav#menu-nav ul li a:hover {
     background-color: #69140E;
 }
 
+.burgerLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #901C14;
+    width: 100%;
+    height: 80px;
+    
+}
+
+.burgerLink ul{
+    padding: 0;
+    width: 100%;
+}
+
+.burgerLink li {
+    list-style-type: none;
+    width: 100%;
+}
+
+.burgerLink li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #efefef;
+    width: 100%;
+    padding:15px 40%;
+    text-align: center;
+    
+}
+
 @media screen and (max-width:700px){
     #menu-nav {
         display: none;
     }
 }
 
-@media screen and (min-width:700px){
-
+@media screen and (max-width:500px){
+    #synopsisTitleContainer {
+        display: none;
+    }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -83,8 +115,11 @@ nav#menu-nav ul li a:hover {
     min-height: 5px;
 }
 
-
-
+.headerbar2 {
+    background-color: #901C14;
+    width: 100%;
+    min-height: 5px;
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Main --------------------------------------------------------------------- */
@@ -127,8 +162,12 @@ div.annonce h3 {
     font-size: large;
 }
 
+#synopsisTitleContainer {
+    width: 100%;
+}
+
 #synopsisTitle {
-    height: 250px;
+    height: 10%;
     width: auto;
 }
 
