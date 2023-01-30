@@ -15,7 +15,7 @@
         <div class="headerbar">
         </div>
         <div id="header">
-            <img src="./assets/img/Logo.png" alt="Logo du site" id="logo">
+            <a href="./index.html"><img src="./assets/img/Logo.png" alt="Logo du site" id="logo"></a>
             <!-- menu de navigation -->
             <nav id="menu-nav">
                 <ul>
@@ -23,24 +23,44 @@
                         <a href="./index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="./liste.html">Scans</a>
+                        <a href="./pages/scans.html">Scans</a>
                     </li>
                     <li>
-                        <a href="./liste.html">Personnages</a>
+                        <a href="./pages/personnages.html">Personnages</a>
                     </li>
                     <li>
-                        <a href="./liste.html">Galerie</a>
+                        <a href="./pages/liste.html">Galerie</a>
                     </li>
                 </ul>
-            </nav>  
+            </nav>
+            <div id="mobileMenu">
+                <input type="checkbox" name="" id="inputBurger">
+                <label for="inputBurger">
+                    <div id="burgerMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <nav id="burgerNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="./pages/scans.html">Scans</a>
+                        </li>
+                        <li>
+                            <a href="#">Personnages</a>
+                        </li>
+                        <li>
+                            <a href="#">Galerie</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="headerbar" id="display"></div>
-        <div class="burgerLink">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-            </ul>
-        </div>
-       
+        <div class="headerbar"></div>
     </header>
 
 
@@ -51,25 +71,39 @@
         <div class="headerbar"></div>
 
         <div id="container">
-            <div id="synopsisTitleContainer">
-                <img src="./assets/img/synopsisGif.gif" alt="" id="synopsisTitle">
+            <div id="synopsisGif">
+                <img src="./assets/img/berserk.gif" alt="" id="synopsisTitle">
             </div>
-            
             <p id="synopsis">
-                Berserk (ベルセルク, Beruseruku?) est un manga de dark fantasy de <a href="https://fr.wikipedia.org/wiki/Kentar%C5%8D_Miura" target="_blank">Kentarō Miura</a>. Il est prépublié depuis 1989
+                Berserk (ベルセルク, Beruseruku?) est un manga de dark fantasy de <a
+                    href="https://fr.wikipedia.org/wiki/Kentar%C5%8D_Miura" target="_blank">Kentarō Miura</a>. Il est
+                prépublié depuis 1989
                 dans les magazines Monthly Animal House puis Young Animal de l'éditeur Hakusensha, et 41 volumes sont
                 sortis en décembre 2021. La version française est éditée par Glénat et 41 tomes sont sortis au 6 juillet
                 2022. Après la mort de Miura en mai 2021, la série reprend la publication en juin 2022 sous la
-                supervision de son ami d'enfance <a href="https://fr.wikipedia.org/wiki/K%C5%8Dji_Mori">Kōji Mori</a> et du groupe d'assistants et d'apprentis de Miura du Studio
+                supervision de son ami d'enfance <a href="https://fr.wikipedia.org/wiki/K%C5%8Dji_Mori">Kōji Mori</a> et
+                du groupe d'assistants et d'apprentis de Miura du Studio
                 Gaga.
+                <br>
+                <br>
                 Situé dans un monde de dark fantasy inspiré de l’Europe médiévale, l'histoire est centrée sur les
                 personnages de Guts, un mercenaire solitaire, et de Griffith, le chef d'un groupe de mercenaires appelé
                 la "Troupe du Faucon". Destiné à un public mature, Berserk jouit au Japon d'une popularité relative en
-                termes de ventes si on le compare à d'autres séries pour adultes telles que <a href="https://fr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure">JoJo's Bizarre Adventure</a> ou
-                <a href="https://fr.wikipedia.org/wiki/Golgo_13">Golgo 13</a>, ceci étant dû à la fréquence de sortie de ses albums ainsi que son univers dark fantasy,
-                jusqu'alors peu implanté dans la culture manga. Néanmoins son intensité, son style visuel extrêmement
+                termes de ventes si on le compare à d'autres séries pour adultes telles que <a
+                    href="https://fr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure">JoJo's Bizarre Adventure</a> ou
+                <a href="https://fr.wikipedia.org/wiki/Golgo_13">Golgo 13</a>, ceci étant dû à la fréquence de sortie de
+                ses albums ainsi que son univers dark fantasy, jusqu'alors peu implanté dans la culture manga. Néanmoins son intensité, son style visuel extrêmement
                 fourni et détaillé ainsi que la gravité de ses thématiques ont fait de ce dernier l'un des seinen les
                 plus populaires de son époque, notamment à l'étranger.
+                Le manga est adapté en série d'animation de 25 épisodes entre octobre 1997 et mars 1998 par le studio
+                OLM. Une trilogie de films d'animation produite par Studio 4°C est sortie entre 2012 et 2013. Une
+                nouvelle adaptation animée par les studios GEMBA et Millepensee est diffusée entre juillet 2016 et juin
+                2017.
+                <br>
+                <br>
+                En mai 2021, le tirage de la série s'élève à plus de 50 millions d'exemplaires, versions numériques
+                comprises, ce qui en fait l'un des mangas les plus vendus de tous les temps. Il a reçu le prix
+                d'excellence lors du Prix culturel Osamu Tezuka en 2002.
             </p>
         </div>
         <a href="https://fr.wikipedia.org/wiki/Golgo_13"></a>
@@ -82,7 +116,7 @@
         </div>
         <div id="footer">
             <p>
-                Copyright &copy; by Pierre V. 2023 - All Right Reserved
+                &copy; 2023 - by Pierre V. 2023 - All Right Reserved
             </p>
         </div>
         <div class="headerbar">

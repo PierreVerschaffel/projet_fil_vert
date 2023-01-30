@@ -1,0 +1,248 @@
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- Scans ----------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+main {
+    z-index: -1;
+}
+
+#scanCatalogue {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(../img/background.png);
+    padding-top: 10px;
+    z-index: -1;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- Cards ----------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.container  {
+    z-index: -1;
+    margin: 30px;
+    transform: translate(0);
+    height: 272px;
+    width: 200px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+  
+.content {
+    position: inherit;
+    transform: translatey(0);
+    text-align: justify;
+    color: black;
+    padding: 0px;
+}
+  
+.content p {
+    padding: 5px;
+    position: absolute;
+    font-weight: 3;
+    text-align: center;
+}
+  
+.flap {
+    width: 100%;
+    height: 100%;
+}
+  
+.flap::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+  
+.flap::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-position: right;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+  
+.container:hover .flap::after {
+    transform: translatex(300px);
+}
+  
+.container:hover .flap::before{
+    transform: translatex(-300px);
+}
+
+
+#berserk1::before {
+    background-image: url(../img/berserk1.jpg);
+}
+
+#berserk1::after {
+    background-image: url(../img/berserk1.jpg);
+}
+
+#berserk2::before {
+    background-image: url(../img/berserk2.jpg);
+}
+
+#berserk2::after {
+    background-image: url(../img/berserk2.jpg);
+}
+
+#berserk3::before {
+    background-image: url(../img/berserk3.jpg);
+}
+
+#berserk3::after {
+    background-image: url(../img/berserk3.jpg);
+}
+
+#berserk4::before {
+    background-image: url(../img/berserk4.jpg);
+}
+
+#berserk4::after {
+    background-image: url(../img/berserk4.jpg);
+}
+
+#berserk5::before {
+    background-image: url(../img/berserk5.jpg);
+}
+
+#berserk5::after {
+    background-image: url(../img/berserk5.jpg);
+}
+
+#berserk6::before {
+    background-image: url(../img/berserk6.jpg);
+}
+
+#berserk6::after {
+    background-image: url(../img/berserk6.jpg);
+}
+
+#berserk7::before {
+    background-image: url(../img/berserk7.jpg);
+}
+
+#berserk7::after {
+    background-image: url(../img/berserk7.jpg);
+}
+
+#berserk8::before {
+    background-image: url(../img/berserk8.jpg);
+}
+
+#berserk8::after {
+    background-image: url(../img/berserk8.jpg);
+}
+
+#berserk9::before {
+    background-image: url(../img/berserk9.jpg);
+}
+
+#berserk9::after {
+    background-image: url(../img/berserk9.jpg);
+}
+
+#berserk10::before {
+    background-image: url(../img/berserk10.jpg);
+}
+
+#berserk10::after {
+    background-image: url(../img/berserk10.jpg);
+}
+
+#berserk11::before {
+    background-image: url(../img/berserk11.jpg);
+}
+
+#berserk11::after {
+    background-image: url(../img/berserk11.jpg);
+}
+
+#berserk12::before {
+    background-image: url(../img/berserk12.jpg);
+}
+
+#berserk12::after {
+    background-image: url(../img/berserk12.jpg);
+}
+
+#berserk13::before {
+    background-image: url(../img/berserk13.jpg);
+}
+
+#berserk13::after {
+    background-image: url(../img/berserk13.jpg);
+}
+
+#berserk14::before {
+    background-image: url(../img/berserk14.jpg);
+}
+
+#berserk14::after {
+    background-image: url(../img/berserk14.jpg);
+}
+
+#berserk15::before {
+    background-image: url(../img/berserk15.jpg);
+}
+
+#berserk15::after {
+    background-image: url(../img/berserk15.jpg);
+}
+
+#berserk16::before {
+    background-image: url(../img/berserk16.jpg);
+}
+
+#berserk16::after {
+    background-image: url(../img/berserk16.jpg);
+}
+
+#berserk17::before {
+    background-image: url(../img/berserk17.jpg);
+}
+
+#berserk17::after {
+    background-image: url(../img/berserk17.jpg);
+}
+
+#berserk18::before {
+    background-image: url(../img/berserk18.jpeg);
+}
+
+#berserk18::after {
+    background-image: url(../img/berserk18.jpeg);
+}
+
+#berserk19::before {
+    background-image: url(../img/berserk19.jpeg);
+}
+
+#berserk19::after {
+    background-image: url(../img/berserk19.jpeg);
+}
+
+#berserk20::before {
+    background-image: url(../img/berserk20.jpg);
+}
+
+#berserk20::after {
+    background-image: url(../img/berserk20.jpg);
+}

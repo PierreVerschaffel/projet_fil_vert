@@ -7,12 +7,13 @@
 
 
 * {
-     box-sizing: border-box;
-     margin: 0;
+ box-sizing: border-box;
+ margin: 0;
 }
 
 body {
     font-family: 'Montserrat';
+    overflow-x: hidden;
 }
 
 
@@ -39,35 +40,7 @@ nav#menu-nav ul li a:hover {
     background-color: #69140E;
 }
 
-.burgerLink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #901C14;
-    width: 100%;
-    height: 80px;
-    
-}
 
-.burgerLink ul{
-    padding: 0;
-    width: 100%;
-}
-
-.burgerLink li {
-    list-style-type: none;
-    width: 100%;
-}
-
-.burgerLink li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #efefef;
-    width: 100%;
-    padding:15px 40%;
-    text-align: center;
-    
-}
 
 @media screen and (max-width:700px){
     #menu-nav {
@@ -75,18 +48,132 @@ nav#menu-nav ul li a:hover {
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:700px){
     #synopsisTitleContainer {
         display: none;
     }
 }
+@media screen and (min-width:701px){
+    #burgerMenu {
+        display: none;
+    }
+    #burgerNav {
+        display: none;
+    }
+    #mobileMenu {
+        display: none;
+    }
+}
+#mobileMenu {
+    z-index: 1;
+}
 
+#burgerMenu {
+    margin: 20px;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+#burgerMenu span {
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+#burgerMenu span:first-child {
+    top: 0;
+}
+
+#burgerMenu span:nth-child(2) {
+    top: 6px;
+}
+
+#burgerMenu span:last-child {
+    top: 12px;
+}
+
+#burgerMenu:hover span:nth-child(2) {
+    opacity: 0;
+}
+      
+#burgerMenu:hover span:first-child, #burgerMenu:hover span:last-child {
+    top: 6px;
+    background-color: black;
+}
+
+#burgerMenu:hover span:first-child {
+    transform: rotate(45deg);
+}
+
+#burgerMenu:hover span:last-child {
+    transform: rotate(-45deg);
+}
+
+
+#inputBurger:checked ~ #burgerNav {
+    transform: translateX(0px);
+    transition: 0.6s;
+}
+
+#burgerNav {
+    left: 0;
+    top: 104px;
+    position: absolute;
+    width: 100%;
+    background-color: #69140E;
+    transform: translateX(-900px);
+    transition: 0.6s;
+    text-align: center;
+}
+
+#burgerNav ul {
+    padding: 0;
+}
+
+#burgerNav li {
+    list-style: none;
+    margin-bottom: 5px;
+    height: 40px;
+    background-color: #901C14;
+    vertical-align: middle;
+}
+
+#burgerNav a {
+    height: 40px;
+    font-size: large;
+    padding-left: 5px;
+    padding-right: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+#burgerNav a:hover {
+    background-color: #69140E;
+}
+
+input {
+    display: none;
+}
+
+@media screen and (max-width:700px){
+    #burgerNav {
+        top: 84px;
+    }
+}
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------------------------- Header --------------------------------------------------------------------- */
+/* ----------------------------------------------------------- Header/Footer ----------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 #footer{
-    background-color: #901C14;
+    background-color: #B42318;
     display: flex;
     justify-content: flex-end;
     padding: 30px 10%;
@@ -97,11 +184,15 @@ nav#menu-nav ul li a:hover {
 }
 
 #header {
-    background-color: #901C14;
+    background-color: #B42318;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+header {
+    z-index: 1;
 }
 #logo {
     cursor: pointer;
@@ -115,21 +206,22 @@ nav#menu-nav ul li a:hover {
     min-height: 5px;
 }
 
-.headerbar2 {
-    background-color: #901C14;
-    width: 100%;
-    min-height: 5px;
+@media screen and (max-width:700px){
+    #logo {
+        height: 50px;
+        width: 58px;
+    }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Main --------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Bannière ----------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 #bannerTitle {
-    font-weight: 900;
     font-size: 64px;
     line-height: 77px;
     text-align: center;
@@ -147,10 +239,16 @@ nav#menu-nav ul li a:hover {
     height: 400px;
     background: url(../img/homepageBanner.jpg) repeat center ;
 }
+@media screen and (max-width:701px){
+    #bannerTitle {
+        font-size: 75px;
+    }
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Synopsis ----------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 div.annonce img{
     border-radius: 50%;
     height: 120px;
@@ -174,12 +272,14 @@ div.annonce h3 {
 #container {
     width: 100%;
     height: auto;
-    text-align: center;
+    background-image: url(../img/background.png);
+    
 }
 
 #synopsis {
-    margin: 2% 20%;
+    padding: 2% 20%;
     font-weight: bold;
+    color: #efefef;
 }
 
 #synopsis a {
@@ -191,3 +291,20 @@ div.annonce h3 {
     text-decoration: underline;
     color: #69140E;
 }
+
+#synopsisGif {
+    margin-top: 1%;
+    float: left;
+    margin-left: 20%;
+    margin-right: 5px;
+}
+
+@media screen and (max-width:700px){
+    #synopsisGif {
+        display: none;
+    }
+    #synopsis {
+        text-align: center;
+    }
+}
+
