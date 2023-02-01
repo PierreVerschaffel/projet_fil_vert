@@ -2,11 +2,6 @@
 /* ---------------------------------------------------------------- Scans ----------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
-
-main {
-    z-index: -1;
-}
-
 #scanCatalogue {
     width: 100%;
     display: flex;
@@ -15,7 +10,6 @@ main {
     justify-content: space-around;
     background-image: url(../img/background.png);
     padding-top: 10px;
-    z-index: -1;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -25,7 +19,6 @@ main {
 
 .container  {
     z-index: -1;
-    margin: 30px;
     transform: translate(0);
     height: 272px;
     width: 200px;
@@ -86,14 +79,23 @@ main {
     background-repeat: no-repeat;
     transition: 1s;
 }
-  
-.container:hover .flap::after {
-    transform: translatex(300px);
+
+#scanCatalogue a {
+    width: 200px;
+    height: 270px;
+    margin: 50px;
 }
-  
-.container:hover .flap::before{
-    transform: translatex(-300px);
-}
+
+@media screen and (min-width:700px) {
+    .container:hover .flap::after {
+        transform: translatex(300px);
+    }
+    
+    .container:hover .flap::before{
+        transform: translatex(-300px);
+    }
+
+}  
 
 
 #berserk1::before {
@@ -254,4 +256,10 @@ main {
 
 #berserk20::after {
     background-image: url(../img/berserk20.jpg);
+}
+
+.scans {
+    width: 50%;
+    height: auto;
+    margin: 5px 25%;
 }

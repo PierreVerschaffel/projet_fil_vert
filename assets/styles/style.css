@@ -14,12 +14,18 @@
 body {
     font-family: 'Montserrat';
     overflow-x: hidden;
+    background-image: url(../img/background.png);
 }
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------- Nav bar --------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+nav#menu-nav ul {
+    margin-right: 70px;
+    width: 100%;
+}
 
 nav#menu-nav ul li {
     list-style-type: none;
@@ -63,7 +69,11 @@ nav#menu-nav ul li a:hover {
     #mobileMenu {
         display: none;
     }
+    
 }
+
+
+
 #mobileMenu {
     z-index: 1;
 }
@@ -128,7 +138,6 @@ nav#menu-nav ul li a:hover {
     background-color: #69140E;
     transform: translateX(-900px);
     transition: 0.6s;
-    text-align: center;
 }
 
 #burgerNav ul {
@@ -140,11 +149,9 @@ nav#menu-nav ul li a:hover {
     margin-bottom: 5px;
     height: 40px;
     background-color: #901C14;
-    vertical-align: middle;
 }
 
 #burgerNav a {
-    height: 40px;
     font-size: large;
     padding-left: 5px;
     padding-right: 100%;
@@ -159,7 +166,7 @@ nav#menu-nav ul li a:hover {
     background-color: #69140E;
 }
 
-input {
+#mobileMenu input {
     display: none;
 }
 
@@ -184,6 +191,7 @@ input {
 }
 
 #header {
+    
     background-color: #B42318;
     display: flex;
     justify-content: space-between;
@@ -192,7 +200,9 @@ input {
 }
 
 header {
-    z-index: 1;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 #logo {
     cursor: pointer;
@@ -216,6 +226,16 @@ header {
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Main --------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+main {
+    padding-top: 104px;
+}
+
+@media screen and (max-width:700px){
+    main {
+        padding-top: 84px;
+    }
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------- Bannière ----------------------------------------------------------------- */
@@ -272,7 +292,7 @@ div.annonce h3 {
 #container {
     width: 100%;
     height: auto;
-    background-image: url(../img/background.png);
+
     
 }
 
@@ -308,3 +328,19 @@ div.annonce h3 {
     }
 }
 
+.popup span {
+    position: absolute;
+    visibility: hidden;
+    font-size: small;
+
+}
+
+.popup:hover span {
+    visibility: visible;
+    max-width: 400px;
+    height: auto;
+    background-color: grey;
+    color: #efefef;
+    border-radius: 10px;
+    padding: 10px;
+}

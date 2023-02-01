@@ -1,0 +1,84 @@
+.galery {
+    width: auto;
+    margin-top: 40px;
+    padding-left: 7%;
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-gap: 40px;
+}
+
+@media screen and (max-width:1800px){
+    .galery {
+        grid-template-columns: repeat(4, 300px);
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:1570px){
+    .galery {
+        grid-template-columns: repeat(3, 300px);
+        padding-left: 20%;
+    }
+}
+
+@media screen and (max-width:1300px){
+    .galery {
+        grid-template-columns: repeat(2, 300px);
+        padding-left: 25%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .galery {
+        grid-template-columns: repeat(1, 300px);
+        padding-left: 35%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .galery {
+        grid-template-columns: repeat(1, 300px);
+        padding-left: 27%;
+    }
+
+}
+
+section {
+    margin: 5px 10px;
+}
+
+.cell {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    background-color: #fff;
+    width: auto;
+    overflow: hidden;
+    align-content: center;
+}
+
+.cover {
+    object-fit: cover;
+    filter: blur(5px)  brightness(1.4);
+    opacity: 0.7;
+    width: 300px;
+    height: 300px;
+}
+
+.hover {
+    position: absolute;
+    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.hover:hover {
+    margin: 0px;
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+}
+
