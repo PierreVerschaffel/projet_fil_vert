@@ -47,8 +47,6 @@
     margin: 30px 0px;
     padding: 5px;
     position: absolute;
-    font-weight: 3;
-
     width: 100%;
 }
   
@@ -258,8 +256,48 @@
     background-image: url(../img/berserk20.jpg);
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------- CSS Pages Tomes--------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 .scans {
     width: 50%;
-    height: auto;
     margin: 5px 25%;
+}
+
+
+
+.left {
+    position: fixed;
+    left: 80px;
+    bottom: 110px;
+}
+
+.right{
+    position: fixed;
+    bottom: 110px;
+    right: 80px;
+}
+
+.left p {
+    text-align: center;
+}
+
+.right p {
+    text-align: center;
+}
+
+.scansDisplay {
+    display: table;
+}
+
+@media screen and (max-width:700px) {
+    .left {
+        left: 20px;
+    }
+
+    .right {
+        right: 20px;
+    }
 }
